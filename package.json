@@ -1,0 +1,16 @@
+{
+  "name": "hometap-project",
+  "version": "1.0.0",
+  "description": "A test automation project for the Hometap take home exercise",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Amanda Baker",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.12.0"
+  }
+}
