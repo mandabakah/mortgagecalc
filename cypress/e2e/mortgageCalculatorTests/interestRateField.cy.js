@@ -13,6 +13,8 @@ describe('Interest Rate Field Tests', () => {
   it('interest rate changes based on loan term selected', () => {
     let interestRate1, interestRate2;
     
+    mortgageCalculator.assertHomePriceInput()
+    mortgageCalculator.assertDownpaymentInput()
     cy.getAndStoreInterestRate().then(() => {
       interestRate1 = Cypress.env('interestRate');
     });
@@ -20,7 +22,6 @@ describe('Interest Rate Field Tests', () => {
     cy.getAndStoreInterestRate().then(() => {
         interestRate2 = Cypress.env('interestRate');
         expect(interestRate1).not.to.equal(interestRate2);
-        cy.log('Interest rates have updated.');
     });
   });
 });
