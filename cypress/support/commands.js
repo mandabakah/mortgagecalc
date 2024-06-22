@@ -4,11 +4,11 @@ Cypress.Commands.add('getAndStoreInterestRate', () => {
       .should('be.visible')
       .invoke('val')
       .then(value => {
-        const interestRate = parseFloat(value);
-        expect(interestRate).to.be.a('number').and.not.NaN;
-        cy.log('Stored interest rate: ' + interestRate);
+        const interestRate = parseFloat(value)
+        expect(interestRate).to.be.a('number').and.not.NaN
+        cy.log('Stored interest rate: ' + interestRate)
   
         // Store the interest rate in Cypress.env to access it later
-        Cypress.env('interestRate', interestRate);
-      });
-  });
+        Cypress.env('interestRate', interestRate)
+      })
+  })
