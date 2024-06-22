@@ -77,8 +77,6 @@ getElement(selector) {
         this.getElement(this.elements.loanProgramDropdown).select(fifteenYearFixed);
         this.getElement(this.elements.loanProgramDropdown).should('be.visible')
             .first().contains(fifteenYearFixed)    
-        //.invoke('text')
-            // cy.log('The new value of the loan program field is: ' + 'text');
         // Unfortunate wait - need to figure out a more elegant way to handle the update time
         cy.wait(2000);
     };
