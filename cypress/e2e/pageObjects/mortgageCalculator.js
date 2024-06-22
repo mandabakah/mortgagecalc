@@ -28,7 +28,7 @@ getElement(selector) {
         this.getElement(this.elements.homePriceInput).should('be.visible')
             .invoke('val')
             .then(value => {
-            const numericValue = parseFloat(value);
+            const numericValue = parseFloat(value)
             expect(numericValue).to.be.a('number').and.not.NaN
             cy.log('The value of the home price field is: ' + numericValue)
         })
@@ -54,7 +54,7 @@ getElement(selector) {
             const numericValue = parseFloat(value)
                 expect(numericValue).to.be.a('number').and.not.NaN
                 cy.log('The value of the interest rate field is: ' + numericValue)
-            });
+            })
        this.getElement(this.elements.interestRateHeader).next().should('have.attr', 'aria-expanded', 'false')
             .find('title')
             .contains('Help')
