@@ -73,7 +73,6 @@ getElement(selector) {
         const fifteenYearFixed = "15 year fixed";
         this.getElement(this.elements.loanProgramDropdown).should('be.visible')
             .first().contains(thirtyYearFixed);
-        // cy.log('The value of the loan program field is: ' + 'text');
         this.getElement(this.elements.loanProgramDropdown).select(fifteenYearFixed);
         this.getElement(this.elements.loanProgramDropdown).should('be.visible')
             .first().contains(fifteenYearFixed)    

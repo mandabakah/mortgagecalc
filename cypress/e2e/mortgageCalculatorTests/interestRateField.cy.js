@@ -12,7 +12,6 @@ describe('Interest Rate Field Tests', () => {
 
   it('interest rate changes based on loan term selected', () => {
     let interestRate1, interestRate2;
-    
     mortgageCalculator.assertHomePriceInput()
     mortgageCalculator.assertDownpaymentInput()
     cy.getAndStoreInterestRate().then(() => {
@@ -25,4 +24,5 @@ describe('Interest Rate Field Tests', () => {
     });
   });
 });
+
 
