@@ -23,6 +23,7 @@ Run tests in the command line with `npx cypress run`
 
 - Find a more elegant way to handle the update times once inputs are changed on the calculator. Hard-coded waits are not ideal
 - Work with developers to put `data-testid` attributes in place so there are stable and consistent locators for tests
+- Consider how and where to store test data
 - Continue to build out tests around Mortgage Calculator including:
   - Advanced options
   - Breakdown
