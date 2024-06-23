@@ -18,3 +18,18 @@ In the Cypress UI:
 **OR**
 
 Run tests in the command line with `npx cypress run`
+
+### Future Considerations:
+
+- Find a more elegant way to handle the update times once inputs are changed on the calculator. Hard-coded waits are not ideal
+- Work with developers to put `data-testid` attributes in place so there are stable and consistent locators for tests
+- Continue to build out tests around Mortgage Calculator including:
+  - Advanced options
+  - Breakdown
+  - Schedule
+  - Full Report
+  - Share
+  - 'Get a more accurate estimate' section
+  - And all remaining sections and links on the page
+- Continue to build out `pageObjects ` for linked pages
+- Integrate tests into CI/CD pipeline
