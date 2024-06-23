@@ -3,7 +3,7 @@
 ## Overview ###
 This is the work for the take home exercise for Hometap
 
-Manual Test Plan can be found here: [Test Plan] (https://github.com/mandabakah/hometap/blob/main/Test%20Plan%20for%20Interest%20Rate%20Input%20for%20Mortgage%20Calculator.pdf)
+Manual Test Plan can be found here: [Test Plan](https://github.com/mandabakah/hometap/blob/main/Test%20Plan%20for%20Interest%20Rate%20Input%20for%20Mortgage%20Calculator.pdf)
 Manual Test Cases can be found here: 
 
 ### Instructions to run automated tests:
