@@ -9,7 +9,7 @@ Manual Test Cases can be found here: [Test Cases](https://github.com/mandabakah/
 
 ### Instructions to run automated tests:
 
-In the Cypress UI:
+To run in Cypress:
 - Open cypress with `npx cypress open`
 - Select E2E testing
 - Select chrome
