@@ -11,6 +11,8 @@ class MortgageCalculator {
         interestRateInput: '[id="rate"]',
         interestRateHeader: '[id="label_4"]',
         interestRateTooltip: '[role="dialog"]',
+        interestRateTooltipHeader: 'section[role="dialog"] header',
+        interetRateTooltipBody: 'section[role="dialog"] div p',
         interestRateTooltipClose: 'span:contains("Close")',
         seeCurrentRatesLink: 'a:contains("See current rates")',
         }
@@ -47,6 +49,10 @@ getElement(selector) {
 
     // Assert interest rate field is visible and all associated links and tooltips are present
     verifyInterestRateInputDetails() {
+        const tooltipContents = `Representative interest rates are based upon a national, or state specific 
+        average from lenders quoting on Zillow for preliminary research purposes only. 
+        Actual available rates and monthly payment amounts are subject to market fluctuations and will depend 
+        on a number of factors, including geography and loan characteristics.`.replace(/\n\s+/g, '')
         this.getElement(this.elements.interestRateHeader).should('contain.text', "Interest rate")
         this.getElement(this.elements.interestRateInput).should('be.visible') 
             .invoke('val')
@@ -55,11 +61,13 @@ getElement(selector) {
                 expect(numericValue).to.be.a('number').and.not.NaN
                 cy.log('The value of the interest rate field is: ' + numericValue)
             })
-       this.getElement(this.elements.interestRateHeader).next().should('have.attr', 'aria-expanded', 'false')
+        this.getElement(this.elements.interestRateInput).next().should('contain.text', '%')
+        this.getElement(this.elements.interestRateHeader).next().should('have.attr', 'aria-expanded', 'false')
             .find('title')
             .contains('Help')
             .click({force: true})
-        this.getElement(this.elements.interestRateTooltip).should('be.visible')
+        this.getElement(this.elements.interestRateTooltipHeader).should('contain.text', 'Interest rate')
+        this.getElement(this.elements.interetRateTooltipBody).should('be.visible').should('contain.text', tooltipContents)
         this.getElement(this.elements.interestRateHeader).next().should('have.attr', 'aria-expanded', 'true')
         this.getElement(this.elements.interestRateTooltipClose).next().click()
         this.getElement(this.elements.interestRateTooltip).should('not.exist')
