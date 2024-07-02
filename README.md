@@ -1,7 +1,5 @@
-# hometap
-
 ## Overview ###
-This is the work for the take home exercise for Hometap
+This is an example for cypress automation
 
 ### Instructions to run automated tests:
 
